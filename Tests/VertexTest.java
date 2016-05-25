@@ -176,7 +176,34 @@ public class VertexTest {
         assertEquals(-1919292860, v1.hashCode());
     }
 
+    @Test
+    public void create_a_port_vertex_using_a_vertex(){
+        Vertex v = new Vertex("Priest Cove");
+        VertexPort vP = new VertexPort(v);
 
+        assertEquals("Priest Cove", vP.getLabel());
+    }
 
+    @Test
+    public void create_a_port_vertex_with_string(){
+        VertexPort vP = new VertexPort("Priest Cove");
+
+        assertEquals("Priest Cove", vP.getLabel());
+    }
+
+    @Test
+    public void create_a_sea_vertex_using_a_vertex(){
+        Vertex v = new Vertex("Atlantic sea");
+        VertexSea vS = new VertexSea(v);
+
+        assertEquals("Atlantic sea", vS.getLabel());
+    }
+
+    @Test
+    public void create_a_sea_vertex_with_string(){
+        VertexSea vS = new VertexSea("Atlantic sea");
+
+        assertEquals("Atlantic sea",vS.getLabel());
+    }
 }
 
